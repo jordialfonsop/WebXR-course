@@ -70,7 +70,7 @@ class App{
             function(gltf){
                 self.chair = gltf.scene;
                 self.scene.add(gltf.scene);
-                scene.loadingBar.visible =false;
+                self.loadingBar.visible =false;
                 self.renderer.setAnimationLoop(self.render.bind(self));
             },
             function(xhr){
