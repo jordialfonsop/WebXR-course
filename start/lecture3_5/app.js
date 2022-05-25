@@ -148,6 +148,13 @@ class App{
 
                     controller.add(self.spotlight);
                     self.spotlight.visible = false;
+
+                    geometry = new THREE.CylinderBufferGeometry(0.03,1,5,32,true);
+                    geometry.rotateX(Math.PI/2);
+                    material = new SpotLightVolumetricMaterial();
+                    const cone = new THREE.Mesh(geometry,material);
+                    cone.translateZ(-2.6);
+                    self.spotlight.add(cone);
                 }),
                     null,
                     (error) => {
