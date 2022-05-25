@@ -135,7 +135,7 @@ class App{
                 //Enter code here
                 loader = new GLTFLoader().setPath('../../assets/');
                 loader.load('flash-light.glb',(gltf) =>{
-                    const flashlight = gltf.scece.children[2];
+                    const flashlight = gltf.scene.children[2];
                     flashlight.scale[0.6,0.6,0.6]
                     controller.add(flashlight);
                     self.spotlight = new THREE.Group();
